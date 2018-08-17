@@ -49,7 +49,8 @@ export default {
       selectValue: "",
       val: "",
       lists: [],
-      msg:'a3为公共选项卡，搜索a1,b1--c2,d2排列组合选项只会展示一栏,输入a-e分类名，展示对应选项卡内容'
+      msg:
+        "a3为公共选项卡，搜索a1,b1--c2,d2排列组合选项只会展示一栏,输入a-e分类名，展示对应选项卡内容"
     };
   },
   mounted() {
@@ -89,11 +90,15 @@ export default {
           }
         }
       }
-      this.lists.forEach((v,i)=>{
+      this.lists.forEach((v, i) => {
         v.show = false;
-      })
-      for (let i = 0; i < tempArr.length; i++) {
-        this.lists[tempArr[i]].show = true;
+      });
+      if (!tempArr.length) {
+        alert("暂无此选项");
+      } else {
+        for (let i = 0; i < tempArr.length; i++) {
+          this.lists[tempArr[i]].show = true;
+        }
       }
     }
   }
