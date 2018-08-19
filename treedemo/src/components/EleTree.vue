@@ -96,10 +96,9 @@
   }
   .el-icon-caret-right:before {
     content:'';
-    background-image: url('../../static/s.png');
-    background-position: center center;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background: url('../../static/s.png') no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
     width: 20px;
     height: 20px;
     display: block;
