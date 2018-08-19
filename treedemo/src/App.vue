@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-     <h2>Sunway</h2>
-     搜索：<input type="text" placeholder="请输入搜索类目" v-model="val" @keyup.enter="search()">
-     <button @click="search()" >search</button>
-     <p>{{msg}}</p>
-    <tree-demo @judge="showBox($event)" :datas="lists"></tree-demo>
+     <h2>Sunway Tree-Demo</h2>
+     <!--搜索：<input type="text" placeholder="请输入搜索类目" v-model="val" @keyup.enter="search()">-->
+     <!--<button @click="search()" >search</button>-->
+     <!--<p>{{msg}}</p>-->
+    <!--<tree-demo @judge="showBox($event)" :datas="lists"></tree-demo>-->
+
+
+
+
+    <ele-tree></ele-tree>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld'
 import TreeDemo from "./components/TreeDemo";
+import EleTree from "./components/EleTree";
+/*
 let lists = [
   {
     item: "a",
@@ -39,10 +46,11 @@ let lists = [
     show: false
   }
 ];
+*/
 export default {
   name: "App",
   components: {
-    TreeDemo
+    TreeDemo,EleTree
   },
   data() {
     return {
@@ -54,7 +62,7 @@ export default {
     };
   },
   mounted() {
-    this.lists = lists;
+    // this.lists = lists;
   },
   methods: {
     search: function() {
