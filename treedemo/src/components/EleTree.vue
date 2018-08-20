@@ -24,9 +24,11 @@
   export default {
     name: "EleTree",
     watch: {
-      // filterText(val) {
-      //   this.$refs.tree2.filter(val);
-      // }
+      filterText(val) {
+        if(!val){
+          this.$refs.tree2.filter(val);
+        }
+      }
     },
 
     methods: {
