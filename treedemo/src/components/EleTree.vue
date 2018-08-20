@@ -5,7 +5,7 @@
     <!--v-model="filterText">-->
     <!--</el-input>-->
 
-    搜索：<input type="text" placeholder="输入关键字进行过滤" v-model="filterText">
+    搜索：<input type="text" placeholder="输入关键字进行过滤" v-model="filterText" @keyup.enter="searchV">
 
     <div class="box">
       <el-tree
@@ -24,16 +24,19 @@
   export default {
     name: "EleTree",
     watch: {
-      filterText(val) {
-        this.$refs.tree2.filter(val);
-      }
+      // filterText(val) {
+      //   this.$refs.tree2.filter(val);
+      // }
     },
 
     methods: {
       filterNode(value, data) {
         if (!value) return true;
         return data.label.indexOf(value) !== -1;
-      }
+      },
+      searchV(){
+        this.$refs.tree2.filter(filterText);
+      },
     },
 
     data() {
