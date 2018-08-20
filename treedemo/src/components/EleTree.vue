@@ -5,7 +5,7 @@
     <!--v-model="filterText">-->
     <!--</el-input>-->
 
-    搜索：<input type="text" placeholder="输入关键字进行过滤" v-model="filterText" @keyup.enter="searchV">
+    搜索：<input type="text" placeholder="输入关键字,回车进行搜索" v-model="filterText" @keyup.enter="searchV">
 
     <div class="box">
       <el-tree
