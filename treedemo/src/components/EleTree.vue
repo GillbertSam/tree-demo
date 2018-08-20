@@ -35,7 +35,7 @@
         return data.label.indexOf(value) !== -1;
       },
       searchV(){
-        this.$refs.tree2.filter(filterText);
+        this.$refs.tree2.filter(this.filterText);
       },
     },
 
